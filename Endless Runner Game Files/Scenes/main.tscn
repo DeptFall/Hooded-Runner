@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://bx7t4qxk0ajp3"]
+
+[ext_resource type="Script" uid="uid://be2jnqa4bp0ym" path="res://Endless Runner Game Files/Scenes/main.gd" id="1_aidtv"]
+[ext_resource type="PackedScene" uid="uid://ce5nt8pg6yrjn" path="res://Endless Runner Game Files/Scenes/parallax_background.tscn" id="1_lsbke"]
+[ext_resource type="PackedScene" uid="uid://b2r43h4uaw7j7" path="res://Endless Runner Game Files/Scenes/ground.tscn" id="2_aidtv"]
+[ext_resource type="PackedScene" uid="uid://b3s3tq7atbyup" path="res://Endless Runner Game Files/Scenes/hooded_boy.tscn" id="3_85s47"]
+[ext_resource type="PackedScene" uid="uid://c2ysguk4xyjbj" path="res://Endless Runner Game Files/Scenes/hud.tscn" id="5_85s47"]
+[ext_resource type="PackedScene" uid="uid://de3i2mg2ou5id" path="res://Endless Runner Game Files/Scenes/game_over.tscn" id="6_1vuov"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_aidtv")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_lsbke")]
+
+[node name="Ground" parent="." instance=ExtResource("2_aidtv")]
+
+[node name="Hooded" parent="." instance=ExtResource("3_85s47")]
+position = Vector2(181, 512)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(5, 5)
+
+[node name="HUD" parent="." instance=ExtResource("5_85s47")]
+
+[node name="GameOver" parent="." instance=ExtResource("6_1vuov")]
+process_mode = 2

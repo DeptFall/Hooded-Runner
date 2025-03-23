@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2r43h4uaw7j7"]
+
+[ext_resource type="Texture2D" uid="uid://bd7s2s4o7cvx2" path="res://Endless Runner Game Files/Background/Capture.PNG" id="1_8i8r8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0f672"]
+size = Vector2(2304, 36)
+
+[node name="Ground" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 612)
+scale = Vector2(82.2857, 1.28572)
+texture = ExtResource("1_8i8r8")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(1152, 630)
+shape = SubResource("RectangleShape2D_0f672")

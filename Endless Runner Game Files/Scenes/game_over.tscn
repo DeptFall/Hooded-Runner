@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://de3i2mg2ou5id"]
+
+[ext_resource type="FontFile" uid="uid://dwjt2m0pdb0lm" path="res://quaver.ttf" id="1_n8llt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2bmm7"]
+bg_color = Color(0.437763, 0.437763, 0.437763, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agk07"]
+bg_color = Color(0.0781564, 0.0781565, 0.0781564, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2n4j"]
+bg_color = Color(0.20033, 0.20033, 0.20033, 1)
+
+[node name="GameOver" type="CanvasLayer"]
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -45.0
+offset_right = 138.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_n8llt")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/hover = SubResource("StyleBoxFlat_2bmm7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_agk07")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g2n4j")
+text = " RESTART"

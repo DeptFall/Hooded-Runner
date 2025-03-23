@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://cipy00hypneib"]
+
+[ext_resource type="Texture2D" uid="uid://cceksjm5gyusu" path="res://Endless Runner Game Files/Sprites/rock 1.png" id="1_nlfik"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05vuh"]
+atlas = ExtResource("1_nlfik")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7drbb"]
+atlas = ExtResource("1_nlfik")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eprho"]
+atlas = ExtResource("1_nlfik")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ta230"]
+atlas = ExtResource("1_nlfik")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drn78"]
+atlas = ExtResource("1_nlfik")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6y800"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05vuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7drbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eprho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ta230")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drn78")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="rock3" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_6y800")
+frame_progress = 0.83711
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_nlfik")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-15, -13, -17, -25, -13, -39, -7, -45, 4, -35, 16, -12, 22, -3, 25, 4, 36, -1, 48, 20, 52, 41, 42, 49, 34, 43, 32, 48, 14, 46, 12, 41, 6, 41, -1, 37, -7, 34, -18, 34, -24, 33, -38, 6, -43, -9, -45, -25, -36, -23, -22, -4, -14, 0)

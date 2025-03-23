@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://ce5nt8pg6yrjn"]
+
+[ext_resource type="Texture2D" uid="uid://duqla1dssrebw" path="res://Endless Runner Game Files/Background/1 Backgrounds/4/Night/1.png" id="1_v6dg0"]
+[ext_resource type="Texture2D" uid="uid://pga5dxpbmhao" path="res://Endless Runner Game Files/Background/1 Backgrounds/4/Night/2.png" id="2_t4hv0"]
+[ext_resource type="Texture2D" uid="uid://dkb8h6r5o4bmn" path="res://Endless Runner Game Files/Background/1 Backgrounds/4/Night/3.png" id="3_8cdl5"]
+[ext_resource type="Texture2D" uid="uid://dpm5ei2l8fu36" path="res://Endless Runner Game Files/Background/1 Backgrounds/4/Night/4.png" id="4_gmw05"]
+[ext_resource type="Texture2D" uid="uid://brlgsl7320c7q" path="res://Endless Runner Game Files/Background/1 Backgrounds/4/Night/5.png" id="5_26dmr"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.00039, 2)
+texture = ExtResource("1_v6dg0")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+scale = Vector2(2, 2)
+texture = ExtResource("2_t4hv0")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+scale = Vector2(2, 2)
+texture = ExtResource("3_8cdl5")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+scale = Vector2(2, 2)
+texture = ExtResource("4_gmw05")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+scale = Vector2(2, 2)
+texture = ExtResource("5_26dmr")
+centered = false

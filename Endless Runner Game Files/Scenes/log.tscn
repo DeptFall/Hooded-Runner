@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://qvvt6lh64kqi"]
+
+[ext_resource type="Texture2D" uid="uid://de35fikds0r72" path="res://Endless Runner Game Files/Sprites/Sprite-0002.png" id="1_hyi5q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gb04"]
+atlas = ExtResource("1_hyi5q")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1r46a"]
+atlas = ExtResource("1_hyi5q")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0nbl"]
+atlas = ExtResource("1_hyi5q")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvjut"]
+atlas = ExtResource("1_hyi5q")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i17uk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gb04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1r46a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0nbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvjut")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Log" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_i17uk")
+frame_progress = 0.109299
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-12, -12, -24, -30, -32, -25, -42, -37, -43, -58, -32, -51, -19, -36, -20, -30, -13, -22, 17, -40, 24, -39, 42, -29, 45, -21, 41, 0, -25, 34, -40, 34, -52, 26, -56, 7, -49, -6, -20, -18, -20, -21, -25, -30)
